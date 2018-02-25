@@ -21,6 +21,10 @@ public class Algo {
         soal3(3);
     }
 
+    /**
+     * zig zag
+     * @param input 
+     */
     public static void soal1(int input) {
         for (int i = 0; i < input; i++) {
             int x = 0;
@@ -48,6 +52,11 @@ public class Algo {
         }
     }
 
+    /**
+     * is prima
+     * @param input
+     * @return 
+     */
     public static boolean soal2(int input) {
         if (input < 2) {
             return false;
@@ -63,6 +72,10 @@ public class Algo {
         return true;
     }
 
+    /**
+     * dadu
+     * @param dadu 
+     */
     public static void soal3(int dadu) {
         dadu(dadu, new ArrayList<Integer>(), 1);
     }
@@ -80,6 +93,36 @@ public class Algo {
                 dadu(jumlahDadu, data, posisi+1);
                 data.remove(data.size()-1);
             }
+        }
+    }
+    
+    /**
+     * happy number
+     * @param n 
+     */
+    public static void soal4(int n){
+        isHappy(n);
+    }
+    
+    public static boolean isHappy(int n) {
+        return (getHasil(n) == 1) ? true: false;
+    }
+    
+    public static int getHasil(int i){
+        try{
+            int hasil = 0;
+            while(i >= 1){
+                int x = (i % 10);
+                hasil += x*x;
+                i = i /10;
+            }
+            if (hasil == 1) {
+                return 1;
+            }else{
+                return getHasil(hasil);
+            }
+        }catch(StackOverflowError e){
+            return 0;
         }
     }
 
