@@ -19,11 +19,18 @@ public class Algo {
     public static void main(String[] args) {
 //        recursifSum(100, 2, new ArrayList<Integer>());
         int a[][] = {
-            {1,2,3},
-            {4,5,6,},
-            {7,8,9}
+            {1,2,3,4},
+            {5,6,7,8},
+            {9,10,11,12}
         };
-        spiral(a);
+//        spiral(a);
+//        soal2(7,11);
+//        soal3(4);
+//        soal1(4);
+//        soal4(12345);
+//        soal5(a);
+//        soal6("qqweqwqs");
+        soal7(1241, 3);
     }
 
     /**
@@ -64,7 +71,21 @@ public class Algo {
      * @param input
      * @return
      */
-    public static boolean soal2(int input) {
+    public static void soal2(int keAwal,int keAkhir) {
+        int i = 2;
+        int pos = 0;
+        while(pos <= keAkhir){
+            if (isPrima(i)) {
+                pos++;
+                if (pos >= keAwal && pos <= keAkhir) {
+                    System.out.println(i);
+                }
+            }
+            i++;
+        }
+    }
+    
+    public static boolean isPrima(int input){
         if (input < 2) {
             return false;
         } else if (input == 2) {
@@ -94,7 +115,7 @@ public class Algo {
      * @param n
      */
     public static void soal4(int n) {
-        isHappy(n);
+        System.out.println(isHappy(n));
     }
 
     /**
@@ -105,7 +126,19 @@ public class Algo {
     public static void soal5(int n[][]) {
         printArray(rotate(n));
     }
+    
+    /**
+     * list jumlah karakter
+     * @param kalimat 
+     */
+    public static void soal6(String kalimat){
+        jumlahKarakter(kalimat);
+    }
 
+    public static void soal7(int x, int n){
+        powerSum(x, n);
+    }
+    
     public static void dadu(int jumlahDadu, ArrayList<Integer> data, int posisi) {
         if (posisi == jumlahDadu) {
             for (int i = 1; i <= 6; i++) {
@@ -199,9 +232,8 @@ public class Algo {
         return false;
     }
 
-    static int powerSum(int X, int N) {
-        // Complete this function
-        return 0;
+    static void powerSum(int X, int N) {
+        recursifSum(X, N, new ArrayList<>());
     }
 
     static void recursifSum(int jumlah, int pangkat, ArrayList<Integer> data) {
