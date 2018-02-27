@@ -66,4 +66,27 @@ public class Easy {
             i++;
         }
     }
+    
+    public static void jumlahKarakter(String kalimat) {
+        for (int i = 0; i < kalimat.length(); i++) {
+            if (!udahAdaKiri(kalimat.substring(0, i), kalimat.charAt(i))) {
+                int jml = 0;
+                for (int j = i; j < kalimat.length(); j++) {
+                    if (kalimat.charAt(i) == kalimat.charAt(j)) {
+                        jml++;
+                    }
+                }
+                System.out.println(kalimat.charAt(i) + " : " + jml);
+            }
+        }
+    }
+    
+    public static boolean udahAdaKiri(String a, char b) {
+        for (int i = 0; i < a.length(); i++) {
+            if (a.charAt(i) == b) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
