@@ -23,4 +23,14 @@ public class Medium {
             return superDigit(jml);
         }
     }
+    
+    public static int[][] rotate(int[][] matrix) {
+        int[][] hasil = new int[matrix[0].length][matrix.length];
+        for (int i = 0; i < hasil.length; i++) {
+            for (int j = 0; j < hasil[i].length; j++) {
+                hasil[i][j] = matrix[matrix.length - 1 - j][i];
+            }
+        }
+        return hasil;
+    }
 }
