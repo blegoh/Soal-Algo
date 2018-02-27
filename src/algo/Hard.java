@@ -5,7 +5,6 @@
  */
 package algo;
 
-import static algo.Algo.jum;
 import static algo.Algo.print;
 import java.util.ArrayList;
 
@@ -47,6 +46,14 @@ public class Hard {
             data.remove(data.size() - 1);
             i++;
         }
+    }
+    
+    static int jum(ArrayList<Integer> data, int pangkat) {
+        int j = 0;
+        for (int i = 0; i < data.size(); i++) {
+            j += Math.pow(data.get(i), pangkat);
+        }
+        return j;
     }
     
     static void spiral(int a[][]) {

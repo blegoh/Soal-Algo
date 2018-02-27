@@ -114,14 +114,6 @@ public class Algo {
             System.out.println("");
         }
     }
-    
-    static int jum(ArrayList<Integer> data, int pangkat) {
-        int j = 0;
-        for (int i = 0; i < data.size(); i++) {
-            j += Math.pow(data.get(i), pangkat);
-        }
-        return j;
-    }
 
     static void printManeh(ArrayList<Integer> hasil) {
         for (int i = 0; i < hasil.size(); i++) {
