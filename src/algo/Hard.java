@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author blegoh
  */
 public class Hard {
-    
+
     public static void dadu(int jumlahDadu, ArrayList<Integer> data, int posisi) {
         if (posisi == jumlahDadu) {
             for (int i = 1; i <= 6; i++) {
@@ -29,7 +29,7 @@ public class Hard {
             }
         }
     }
-    
+
     static void powerSum(int X, int N) {
         recursifSum(X, N, new ArrayList<>());
     }
@@ -47,7 +47,7 @@ public class Hard {
             i++;
         }
     }
-    
+
     static int jum(ArrayList<Integer> data, int pangkat) {
         int j = 0;
         for (int i = 0; i < data.size(); i++) {
@@ -55,7 +55,7 @@ public class Hard {
         }
         return j;
     }
-    
+
     static void spiral(int a[][]) {
         ArrayList<Integer> as = new ArrayList<>();
         int maxAtas = 1;
@@ -73,6 +73,7 @@ public class Hard {
                     y++;
                 } else if (x < maxBawah) {
                     arah = 1;
+                    maxKanan--;
                     as.add(bawah(a, x, y));
                     x++;
                 }
@@ -82,6 +83,7 @@ public class Hard {
                     x++;
                 } else if (y > maxKiri) {
                     arah = 2;
+                    maxBawah--;
                     as.add(kiri(a, x, y));
                     y--;
                 }
@@ -91,6 +93,7 @@ public class Hard {
                     y--;
                 } else if (x > maxAtas) {
                     arah = 3;
+                    maxKiri++;
                     as.add(atas(a, x, y));
                     x--;
                 }
@@ -100,6 +103,7 @@ public class Hard {
                     x--;
                 } else if (y < maxKanan) {
                     arah = 0;
+                    maxAtas++;
                     as.add(kanan(a, x, y));
                     y++;
                 }
@@ -122,5 +126,54 @@ public class Hard {
 
     static int bawah(int a[][], int x, int y) {
         return a[x + 1][y];
+    }
+
+    static int[][] generateMatrixSpiral(int n) {
+        int i = 1;
+        int a[][] = new int[n][n];
+        int maxAtas = 1;
+        int maxKanan = n - 1;
+        int maxBawah = n - 1;
+        int maxKiri = 0;
+        int arah = 0; // 0>kanan;1=>bawah,2=>kiri,3=>atas
+        int x = 0;
+        int y = -1;
+        for (int j = 0; j < n * n; j++) {
+            if (arah == 0) {
+                if (y < maxKanan) {
+                    a[x][++y] = i;
+                } else if (x < maxBawah) {
+                    arah = 1;
+                    maxKanan--;
+                    a[++x][y] = i;
+                }
+            } else if (arah == 1) {
+                if (x < maxBawah) {
+                    a[++x][y] = i;
+                } else if (y > maxKiri) {
+                    arah = 2;
+                    maxBawah--;
+                    a[x][--y] = i;
+                }
+            } else if (arah == 2) {
+                if (y > maxKiri) {
+                    a[x][--y] = i;
+                } else if (x > maxAtas) {
+                    arah = 3;
+                    maxKiri++;
+                    a[--x][y] = i;
+                }
+            } else if (arah == 3) {
+                if (x > maxAtas) {
+                    a[--x][y] = i;
+                } else if (y < maxKanan) {
+                    arah = 0;
+                    maxAtas++;
+                    a[x][++y] = i;
+                }
+            }
+            i++;
+        }
+        return a;
     }
 }
