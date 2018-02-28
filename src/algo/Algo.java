@@ -17,29 +17,28 @@ public class Algo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
 //        recursifSum(100, 2, new ArrayList<Integer>());
         int a[][] = {
             {1, 2, 3, 4},
             {5, 6, 7, 8},
             {9, 10, 11, 12},
-            {13,14,15,16}
+            {13, 14, 15, 16}
         };
-        printString(Medium.listPalindrom("aabasa"));
+//        soal1(4); //easy
 //        soal2(7,11); //easy
 //        soal3(4); //hard
-//        soal1(4); //easy
 //        soal4(12345); //medium
 //        soal5(a); //medium
 //        soal6("qqweqwqs"); //easy
 //        soal7(1241, 3); //hard
-//        soal8 //hard
+//        soal8(a); //hard
 //        soal9(5); // hard
+        soal10("aabasa"); // medium
     }
 
     /**
-     * zig zag
-     * level easy
+     * zig zag level easy
      *
      * @param input
      */
@@ -48,19 +47,19 @@ public class Algo {
     }
 
     /**
-     * 
-     * list bil prima
-     * level easy
+     *
+     * list bil prima level easy
+     *
      * @param keAwal
-     * @param keAkhir 
+     * @param keAkhir
      */
     public static void soal2(int keAwal, int keAkhir) {
         Easy.listPrima(keAwal, keAkhir);
     }
-    
+
     /**
-     * dadu
-     * level hard
+     * dadu level hard
+     *
      * @param dadu
      */
     public static void soal3(int dadu) {
@@ -68,8 +67,8 @@ public class Algo {
     }
 
     /**
-     * happy number
-     * level medium
+     * happy number level medium
+     *
      * @param n
      */
     public static void soal4(int n) {
@@ -78,8 +77,8 @@ public class Algo {
     }
 
     /**
-     * rotate
-     * level medium
+     * rotate level medium
+     *
      * @param n
      */
     public static void soal5(int n[][]) {
@@ -87,8 +86,8 @@ public class Algo {
     }
 
     /**
-     * list jumlah karakter
-     * level easy
+     * list jumlah karakter level easy
+     *
      * @param kalimat
      */
     public static void soal6(String kalimat) {
@@ -98,15 +97,19 @@ public class Algo {
     public static void soal7(int x, int n) {
         Hard.powerSum(x, n);
     }
-    
+
     public static void soal8(int x[][]) {
         Hard.spiral(x);
     }
-    
+
     public static void soal9(int n) {
         printArray(Hard.generateMatrixSpiral(n));
     }
-    
+
+    public static void soal10(String kalimat) {
+        printString(Medium.listPalindrom(kalimat));
+    }
+
     public static void print(ArrayList<Integer> data) {
         System.out.print("[");
         for (int i = 0; i < data.size(); i++) {
@@ -135,12 +138,11 @@ public class Algo {
         }
         System.out.println("");
     }
-    
+
     static void printString(ArrayList<String> hasil) {
         for (int i = 0; i < hasil.size(); i++) {
             System.out.println(hasil.get(i));
         }
     }
 
-    
 }
