@@ -5,6 +5,8 @@
  */
 package algo;
 
+import java.util.List;
+
 /**
  *
  * @author blegoh
@@ -88,5 +90,18 @@ public class Easy {
             }
         }
         return false;
+    }
+    
+    public static int[] moveZeroes(int[] nums) {
+        for (int i = nums.length-2; i >= 0; i--) {
+            if (nums[i] == 0) {
+                int z = i+1;
+                while(z < nums.length && nums[z] != 0){
+                    nums[z-1] = nums[z];
+                    nums[z++] = 0;
+                }
+            }
+        }
+        return nums;
     }
 }
