@@ -25,6 +25,19 @@ public class Algo {
             {9, 10, 11, 12},
             {13, 14, 15, 16}
         };
+        
+        int asas[] = {0, 1, 0, 3, 12};
+        
+        int as[][] = {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+        {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+        {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
+//        System.out.println(Hard.maxAreaOfIsland(as)); // hard ini
+
 //        soal1(4); //easy
 //        soal2(7,11); //easy
 //        soal3(4); //hard
@@ -34,7 +47,9 @@ public class Algo {
 //        soal7(1241, 3); //hard
 //        soal8(a); //hard
 //        soal9(5); // hard
-        soal10("aabasa"); // medium
+//        soal10("aabasa"); // medium
+//        soal11(asas);//easy
+        soal12(0); //medium
     }
 
     /**
@@ -93,23 +108,34 @@ public class Algo {
     public static void soal6(String kalimat) {
         Easy.jumlahKarakter(kalimat);
     }
-
+    
     public static void soal7(int x, int n) {
         Hard.powerSum(x, n);
     }
-
+    
     public static void soal8(int x[][]) {
         Hard.spiral(x);
     }
-
+    
     public static void soal9(int n) {
         printArray(Hard.generateMatrixSpiral(n));
     }
-
+    
     public static void soal10(String kalimat) {
         printString(Medium.listPalindrom(kalimat));
     }
-
+    
+    public static void soal11(int[] nums) {
+        int hasil[] = Easy.moveZeroes(nums);
+        for (int i = 0; i < hasil.length; i++) {
+            System.out.print(hasil[i] + " ");
+        }
+    }
+    
+    public static void soal12(int ke) {
+        print(Medium.pascal(ke));
+    }
+    
     public static void print(ArrayList<Integer> data) {
         System.out.print("[");
         for (int i = 0; i < data.size(); i++) {
@@ -122,7 +148,7 @@ public class Algo {
         System.out.print("]");
         System.out.println("");
     }
-
+    
     public static void printArray(int[][] args) {
         for (int i = 0; i < args.length; i++) {
             for (int j = 0; j < args[i].length; j++) {
@@ -131,18 +157,18 @@ public class Algo {
             System.out.println("");
         }
     }
-
+    
     static void printManeh(ArrayList<Integer> hasil) {
         for (int i = 0; i < hasil.size(); i++) {
             System.out.print(hasil.get(i) + " ");
         }
         System.out.println("");
     }
-
+    
     static void printString(ArrayList<String> hasil) {
         for (int i = 0; i < hasil.size(); i++) {
             System.out.println(hasil.get(i));
         }
     }
-
+    
 }
