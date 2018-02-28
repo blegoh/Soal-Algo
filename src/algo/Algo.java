@@ -49,7 +49,8 @@ public class Algo {
 //        soal9(5); // hard
 //        soal10("aabasa"); // medium
 //        soal11(asas);//easy
-        soal12(0); //medium
+//        soal12(0); //medium
+//        soal13(asas);//easy
     }
 
     /**
@@ -134,6 +135,13 @@ public class Algo {
     
     public static void soal12(int ke) {
         print(Medium.pascal(ke));
+    }
+    
+    public static void soal13(int nums[]) {
+        ArrayList<Integer> a = Easy.countSmaller(nums);
+        for (int i = 0; i < a.size(); i++) {
+            System.out.print(a.get(i)+" ");
+        }
     }
     
     public static void print(ArrayList<Integer> data) {
