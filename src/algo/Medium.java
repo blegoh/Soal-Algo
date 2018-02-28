@@ -54,8 +54,8 @@ public class Medium {
         }
         return hmm;
     }
-    
-    public static boolean wisEnek(ArrayList<String> hmm, String sa){
+
+    public static boolean wisEnek(ArrayList<String> hmm, String sa) {
         for (int i = 0; i < hmm.size(); i++) {
             if (hmm.get(i).equals(sa)) {
                 return true;
@@ -66,5 +66,23 @@ public class Medium {
 
     public static boolean isPalindrom(String word) {
         return word.equals(new StringBuilder(word).reverse().toString());
+    }
+    
+    public static ArrayList<Integer> pascal(int i){
+        ArrayList<Integer> a = new ArrayList<>();
+        int x = i-1;
+        for (int j = 0; j < i; j++) {
+            a.add(getPosisi(j, x--));
+        }
+        return a;
+    }
+    
+    //pascal
+    public static int getPosisi(int x, int y){
+        if (x == 0 || y == 0) {
+            return 1;
+        }else{
+            return getPosisi(x, y-1) + getPosisi(x-1, y);
+        }
     }
 }
