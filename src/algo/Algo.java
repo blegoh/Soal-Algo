@@ -28,16 +28,15 @@ public class Algo {
         
         int asas[] = {0, 1, 0, 3, 12};
         
-        int as[][] = {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-        {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
-        {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
-//        System.out.println(Hard.maxAreaOfIsland(as)); // hard ini
-
+        int as[][] =   {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                        {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+                        {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
+        
 //        soal1(4); //easy
 //        soal2(7,11); //easy
 //        soal3(4); //hard
@@ -51,6 +50,7 @@ public class Algo {
 //        soal11(asas);//easy
 //        soal12(0); //medium
 //        soal13(asas);//easy
+        soal14(as); // hard
     }
 
     /**
@@ -142,6 +142,11 @@ public class Algo {
         for (int i = 0; i < a.size(); i++) {
             System.out.print(a.get(i)+" ");
         }
+    }
+    
+    public static void soal14(int[][] a){
+        int total = Hard.maxAreaOfIsland(a);
+        System.out.println(total);
     }
     
     public static void print(ArrayList<Integer> data) {
