@@ -81,7 +81,7 @@ public class Algo {
     }
 
     /**
-     * happy number level medium
+     * super digit level medium
      *
      * @param n
      */
@@ -108,22 +108,43 @@ public class Algo {
         Easy.jumlahKarakter(kalimat);
     }
 
+    /**
+     * level hard
+     * @param x
+     * @param n 
+     */
     public static void soal7(int x, int n) {
         Hard.powerSum(x, n);
     }
 
+    /**
+     * spiral level hard
+     * @param x 
+     */
     public static void soal8(int x[][]) {
         Hard.spiral(x);
     }
 
+    /**
+     * level hard
+     * @param n 
+     */
     public static void soal9(int n) {
         printArray(Hard.generateMatrixSpiral(n));
     }
 
+    /**
+     * level medium
+     * @param kalimat 
+     */
     public static void soal10(String kalimat) {
         printString(Medium.listPalindrom(kalimat));
     }
 
+    /**
+     * easy
+     * @param nums 
+     */
     public static void soal11(int[] nums) {
         int hasil[] = Easy.moveZeroes(nums);
         for (int i = 0; i < hasil.length; i++) {
@@ -131,10 +152,18 @@ public class Algo {
         }
     }
 
+    /**
+     * level medium
+     * @param ke 
+     */
     public static void soal12(int ke) {
         print(Medium.pascal(ke));
     }
 
+    /**
+     * level easy
+     * @param nums 
+     */
     public static void soal13(int nums[]) {
         ArrayList<Integer> a = Easy.countSmaller(nums);
         for (int i = 0; i < a.size(); i++) {
@@ -142,11 +171,19 @@ public class Algo {
         }
     }
 
+    /**
+     * level hard
+     * @param a 
+     */
     public static void soal14(int[][] a) {
         int total = Hard.maxAreaOfIsland(a);
         System.out.println(total);
     }
 
+    /**
+     * level medium
+     * @param num 
+     */
     public static void soal15(int num) {
         System.out.println(Medium.intToRoman(num));
     }
