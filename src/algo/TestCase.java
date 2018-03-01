@@ -41,4 +41,71 @@ public class TestCase {
             {9, 10, 11, 12},
             {13, 14, 15, 16}
         };
+    
+    public static String soal6_1 = "asfawse";
+    
+    public static String soal6_2 = "nkbwskejrw";
+    
+    public static int soal7_1a = 1241;
+    public static int soal7_1b = 3;
+
+    public static int soal7_2a = 1412;
+    public static int soal7_2b = 2;
+    
+    public static int soal8_1[][] = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+    
+    public static int soal8_2[][] = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+    
+    public static int soal9_1 = 6;
+    
+    public static int soal9_2 = 4;
+    
+    public static String soal10_1 = "aabasa";
+    
+    public static String soal10_2 = "nakesefekn";
+    
+    public static int soal11_1[] = {0, 1, 0, 3, 12};
+    
+    public static int soal11_2[] = {4, 1, 0, 3, 0, 0,12,3};
+    
+    public static int soal12_1 = 5;
+    
+    public static int soal12_2 = 7;
+    
+    public static int soal13_1[] = {6, 1, 7, 3, 12};
+    
+    public static int soal13_2[] = {4, 1, 0, 3, 2, 0,12,3};
+    
+    public static int soal14_1[][] = {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+        {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
+        {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
+        {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
+    
+    public static int soal14_2[][] = 
+       {{0, 1, 1, 0, 0, 0},
+        {0, 1, 0, 0, 0, 0},
+        {1, 1, 0, 0, 1, 0},
+        {1, 0, 0, 0, 1, 1},
+        {1, 1, 0, 0, 1, 1},
+        {0, 0, 1, 1, 1, 0},
+        {1, 1, 1, 0, 0, 0},
+        {0, 0, 0, 0, 1, 1}};
+    
+    public static int soal15_1 = 499;
+    
+    public static int soal15_2 = 319;
+    
 }
