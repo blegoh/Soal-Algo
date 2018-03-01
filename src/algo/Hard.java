@@ -176,4 +176,121 @@ public class Hard {
         }
         return a;
     }
+
+    public static int maxAreaOfIsland(int[][] grid) {
+        ArrayList<ArrayList<int[]>> asuu = new ArrayList<>();
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == 1 && !udahDiPake(asuu, i, j)) {
+                    ArrayList<int[]> as = anu(grid, new ArrayList<int[]>(), i, j);
+                    asuu.add(as);
+                }
+            }
+        }
+        return asuu.size();
+    }
+
+    /**
+     * fix
+     *
+     * @param grid
+     * @param hasil
+     * @param x
+     * @param y
+     * @return
+     */
+    public static ArrayList<int[]> anu(int[][] grid, ArrayList<int[]> hasil, int x, int y) {
+        if (grid[x][y] == 0) {
+            return null;
+        }
+        if (!udahDiPake2(hasil, x, y)) {
+            int pos[] = {x, y};
+            hasil.add(pos);
+        }
+        if (kiriAdaGak(grid, x, y)) {
+            if (!udahDiPake2(hasil, x, y - 1)) {
+                hasil = anu(grid, hasil, x, y - 1);
+            }
+        }
+        if (atasAdaGak(grid, x, y)) {
+            if (!udahDiPake2(hasil, x - 1, y)) {
+                hasil = anu(grid, hasil, x - 1, y);
+            }
+        }
+        if (kananAdaGak(grid, x, y)) {
+            if (!udahDiPake2(hasil, x, y + 1)) {
+                hasil = anu(grid, hasil, x, y + 1);
+            }
+        }
+        if (bawahAdaGak(grid, x, y)) {
+            if (!udahDiPake2(hasil, x + 1, y)) {
+                hasil = anu(grid, hasil, x + 1, y);
+            }
+        }
+        return hasil;
+    }
+
+    public static boolean udahDiPake(ArrayList<ArrayList<int[]>> total, int x, int y) {
+        for (int i = 0; i < total.size(); i++) {
+            for (int j = 0; j < total.get(i).size(); j++) {
+                if (x == total.get(i).get(j)[0] && total.get(i).get(j)[1] == y) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    /**
+     * fix
+     *
+     * @param total
+     * @param x
+     * @param y
+     * @return
+     */
+    public static boolean udahDiPake2(ArrayList<int[]> total, int x, int y) {
+        for (int j = 0; j < total.size(); j++) {
+            if (x == total.get(j)[0] && total.get(j)[1] == y) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean kiriAdaGak(int[][] grid, int x, int y) {
+        if (y > 0) {
+            if (grid[x][y - 1] == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean atasAdaGak(int[][] grid, int x, int y) {
+        if (x > 0) {
+            if (grid[x - 1][y] == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean bawahAdaGak(int[][] grid, int x, int y) {
+        if (x < grid.length - 1) {
+            if (grid[x + 1][y] == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean kananAdaGak(int[][] grid, int x, int y) {
+        if (y < grid[0].length - 1) {
+            if (grid[x][y + 1] == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
