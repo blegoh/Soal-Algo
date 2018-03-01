@@ -6,12 +6,15 @@
 package algo;
 
 import java.util.ArrayList;
+import java.util.TreeMap;
 
 /**
  *
  * @author yusuf
  */
 public class Algo {
+    
+   
 
     /**
      * @param args the command line arguments
@@ -36,7 +39,6 @@ public class Algo {
                         {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
                         {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
                         {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
-        
 //        soal1(4); //easy
 //        soal2(7,11); //easy
 //        soal3(4); //hard
@@ -50,7 +52,8 @@ public class Algo {
 //        soal11(asas);//easy
 //        soal12(0); //medium
 //        soal13(asas);//easy
-        soal14(as); // hard
+//        soal14(as); // hard
+//        soal15(49);
     }
 
     /**
@@ -147,6 +150,10 @@ public class Algo {
     public static void soal14(int[][] a){
         int total = Hard.maxAreaOfIsland(a);
         System.out.println(total);
+    }
+    
+    public static void soal15(int num){
+        System.out.println(Medium.intToRoman(num));
     }
     
     public static void print(ArrayList<Integer> data) {
