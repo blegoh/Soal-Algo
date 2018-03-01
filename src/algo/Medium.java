@@ -85,4 +85,28 @@ public class Medium {
             return getPosisi(x, y-1) + getPosisi(x-1, y);
         }
     }
+    
+    public static String intToRoman(int num) {
+        String pitik[] = {"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
+        int kucing[] = {1,4,5,9,10,40,50,90,100,400,500,900,1000};
+        String w[] = new String[kucing.length];
+        String asu = "";
+        for (int i = pitik.length-1; i >= 0 && num > 0; i--) {
+            if (num >= kucing[i]) {
+                int h = (int) num/kucing[i];
+                String as = ""; 
+                for (int j = 0; j < h; j++) {
+                    as += pitik[i];
+                }
+                w[i] = as;
+                num = num % kucing[i];
+            }
+        }
+        for (int i = w.length-1; i >= 0; i--) {
+            if (w[i] == null) continue;
+            String we = w[i];
+                asu += we;
+        }
+        return asu;
+    }
 }
