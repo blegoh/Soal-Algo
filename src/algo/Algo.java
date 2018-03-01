@@ -18,16 +18,7 @@ public class Algo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int asas[] = {0, 1, 0, 3, 12};
-
-        int as[][] = {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-        {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0},
-        {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
+        
 //        soal1(TestCase.soal1_1); //easy
 //        soal1(TestCase.soal1_2); //easy
 //        soal2(TestCase.soal2_1a,TestCase.soal2_1b); //easy
@@ -38,16 +29,26 @@ public class Algo {
 //        soal4(TestCase.soal4_2); //medium
 //        soal5(TestCase.soal5_1); //medium
 //        soal5(TestCase.soal5_2); //medium
-//        soal6("qqweqwqs"); //easy
-//        soal7(1241, 3); //hard
-//        soal8(a); //hard
-//        soal9(5); // hard
-//        soal10("aabasa"); // medium
-//        soal11(asas);//easy
-//        soal12(0); //medium
-//        soal13(asas);//easy
-//        soal14(as); // hard
-//        soal15(49);
+//        soal6(TestCase.soal6_1); //easy
+//        soal6(TestCase.soal6_2); //easy
+//        soal7(TestCase.soal7_1a, TestCase.soal7_1b); //hard
+//        soal7(TestCase.soal7_2a, TestCase.soal7_2b); //hard
+//        soal8(TestCase.soal8_1); //hard
+//        soal8(TestCase.soal8_2); //hard
+//        soal9(TestCase.soal9_1); // hard
+//        soal9(TestCase.soal9_2); // hard
+//        soal10(TestCase.soal10_1); // medium
+//        soal10(TestCase.soal10_2); // medium
+//        soal11(TestCase.soal11_1);//easy
+//        soal11(TestCase.soal11_2);//easy
+//        soal12(TestCase.soal12_1); //medium
+//        soal12(TestCase.soal12_2); //medium
+//        soal13(TestCase.soal13_1);//easy
+//        soal13(TestCase.soal13_2);//easy
+//        soal14(TestCase.soal14_1); // hard
+//        soal14(TestCase.soal14_2); // hard
+//        soal15(TestCase.soal15_1); //medium
+//        soal15(TestCase.soal15_2); //medium
     }
 
     /**
